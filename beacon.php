@@ -103,7 +103,7 @@ $jsonFlex = [
             "action" => [
               "type" => "uri",
               "label" => "รายละเอียด",
-              "uri" => "http://secure.chulabook.com/secure/line/attend_auto.php"
+              "uri" => "https://secure.chulabook.com/line/attend.php?badgenumber=0444"
             ]
           ]
         ]
