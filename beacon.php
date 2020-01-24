@@ -96,7 +96,7 @@ $jsonFlex = [
         "contents" => [
           [
             "type" => "text",
-            "text" => "รายละเอียด",
+            "text" => "ตรวจสอบข้อมูลหลังจากบันทึกเวลาแล้ว 5 นาที",
             "size" => "lg",
             "align" => "start",
             "color" => "#0084B6",
