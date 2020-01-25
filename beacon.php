@@ -135,22 +135,22 @@ if ( sizeof($request_array['events']) > 0 ) {
 
 echo "OK";
 
-$objConnect = mssql_connect("localhost","sa","Adminchul@book1") or die("Error Connect to Database");
-$objDB = mssql_select_db("Attend");
-$strSQL = "INSERT INTO TIME ";
-$strSQL .="(DATE,TIME) ";
-$strSQL .="VALUES ";
-$strSQL .="('new_date','new_time')";
-$objQuery = mssql_query($strSQL);
-if($objQuery)
-{
-	echo "Save Done.";
-}
-else
-{
-	echo "Error Save [".$strSQL."]";
-}
-mssql_close($objConnect);
+// $objConnect = mssql_connect("localhost","sa","Adminchul@book1") or die("Error Connect to Database");
+// $objDB = mssql_select_db("Attend");
+// $strSQL = "INSERT INTO TIME ";
+// $strSQL .="(DATE,TIME) ";
+// $strSQL .="VALUES ";
+// $strSQL .="('new_date','new_time')";
+// $objQuery = mssql_query($strSQL);
+// if($objQuery)
+// {
+// 	echo "Save Done.";
+// }
+// else
+// {
+// 	echo "Error Save [".$strSQL."]";
+// }
+// mssql_close($objConnect);
 
 
 function send_reply_message($url, $post_header, $post_body)
