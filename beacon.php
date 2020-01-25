@@ -13,7 +13,7 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
-var_export($request_array);
+// var_export($request_array);
 
 date_default_timezone_set("Asia/Bangkok");
 
@@ -124,7 +124,7 @@ if ( sizeof($request_array['events']) > 0 ) {
             'messages' => [$jsonFlex]
         ];
 
-//        print_r($data);
+        print_r($data);
       
         $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 
