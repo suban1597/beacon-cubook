@@ -1,5 +1,6 @@
 <?php
 
+
 $API_URL = 'https://api.line.me/v2/bot/message';
 //it-beacon
 $ACCESS_TOKEN = '4rdPrwctgzH4f52jYbtvykZkki+MN2xZK+finbLthiCRMR1fyBLt+dlKU8ExfQxxcV7ZC9VX+lG/VG5XnZHp7xuoVQs4tyoCNUA0TxZek8M1DqArJBPPalW51qk2NWCu0L1En5v+FdTDw3csua882gdB04t89/1O/w1cDnyilFU='; 
@@ -9,9 +10,10 @@ $channelSecret = '39a9b2c7954e9685bc7007335ea632ba';
 //$channelSecret = '2669bb384ac7522ea63d19dd55f324de';
 
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
+
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
-//var_export($request_array);
+var_export($request_array);
 
 date_default_timezone_set("Asia/Bangkok");
 
@@ -103,7 +105,7 @@ $jsonFlex = [
             "action" => [
               "type" => "uri",
               "label" => "รายละเอียด",
-              "uri" => "https://secure.chulabook.com/line/attend.php?badgenumber=0444"
+              "uri" => "https://www.google.co.th/"
             ]
           ]
         ]
@@ -129,29 +131,11 @@ if ( sizeof($request_array['events']) > 0 ) {
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
 
         echo "Result: ".$send_result."\r\n";
-	        
+        
     }
 }
 
 echo "OK";
-
-// $objConnect = mssql_connect("localhost","sa","Adminchul@book1") or die("Error Connect to Database");
-// $objDB = mssql_select_db("Attend");
-// $strSQL = "INSERT INTO TIME ";
-// $strSQL .="(DATE,TIME) ";
-// $strSQL .="VALUES ";
-// $strSQL .="('new_date','new_time')";
-// $objQuery = mssql_query($strSQL);
-// if($objQuery)
-// {
-// 	echo "Save Done.";
-// }
-// else
-// {
-// 	echo "Error Save [".$strSQL."]";
-// }
-// mssql_close($objConnect);
-
 
 function send_reply_message($url, $post_header, $post_body)
 {
