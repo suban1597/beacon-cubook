@@ -13,7 +13,7 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
-// var_export($request_array);
+var_export($request_array);            //Mark for "Null" message
 
 date_default_timezone_set("Asia/Bangkok");
 
@@ -113,7 +113,7 @@ $jsonFlex = [
     ]
   ];
 
-if ( sizeof($request_array['events']) > 0 ) {
+if ( sizeof($request_array['events']) > 1 ) {
     foreach ($request_array['events'] as $event) {
         error_log(json_encode($event));
         $reply_message = '';
