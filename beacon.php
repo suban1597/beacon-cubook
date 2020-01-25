@@ -113,7 +113,7 @@ $jsonFlex = [
     ]
   ];
 
-if ( sizeof($request_array['events']) > 1 ) {
+if ( sizeof($request_array['events']) > 0 ) {
     foreach ($request_array['events'] as $event) {
         error_log(json_encode($event));
         $reply_message = '';
