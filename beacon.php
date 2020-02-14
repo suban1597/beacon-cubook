@@ -33,7 +33,7 @@ $month_arr=array(
 );
 
 
-$new_date = date("d/mm/YYYY);
+$new_date = date("d/mm/YYYY");
 echo $new_date;
 $new_time = date("H:i:s");
 echo $new_time;
