@@ -121,7 +121,7 @@ if ( sizeof($request_array['events']) > 0 ) {
         $data = [
             'replyToken' => $reply_token,
             'messages' => [$jsonFlex],
-            'messages' => [https://beacon-cubook.herokuapp.com/insert_db.php]
+            'messages' => http://www.chulabook.com/secure/Line/insert_db.php
         ];
 
         print_r($data);
