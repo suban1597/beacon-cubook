@@ -14,7 +14,7 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 var_export($request_array);            //Mark for "Null" message
-
+CHARSET=utf8;
 date_default_timezone_set("Asia/Bangkok");
 
 $month_arr=array(
