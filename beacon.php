@@ -152,7 +152,7 @@ function send_reply_message($url, $post_header, $post_body)
 
 }
 
-$objConnect = mssql_connect("localhost","sa","Adminchul@book1") or die("Error Connect to Database");
+$objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
 $objDB = mssql_select_db("Line_Project");
 $strSQL = "INSERT INTO Attend (TIME,DATE)";
 
