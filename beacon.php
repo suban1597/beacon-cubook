@@ -37,6 +37,14 @@ echo $new_date;
 $new_time = date("H:i:s");
 echo $new_time;
 
+        
+$objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
+$objDB = mssql_select_db("Line_Project");
+$strSQL = "INSERT INTO Attend ";
+$strSQL .="(TIME,DATE) ";
+$strSQL .="VALUES ";
+$strSQL .="('$new_time','$new_date')";
+mssql_close($objConnect);
 
 $jsonFlex = [
     "type" => "flex",
@@ -131,15 +139,6 @@ if ( sizeof($request_array['events']) > 0 ) {
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
 
         echo "Result: ".$send_result."\r\n";
-        
-        $objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
-$objDB = mssql_select_db("Line_Project");
-$strSQL = "INSERT INTO Attend ";
-$strSQL .="(TIME,DATE) ";
-$strSQL .="VALUES ";
-$strSQL .="('$new_time','$new_date')";
-mssql_close($objConnect);
-        
         
     }
 }
