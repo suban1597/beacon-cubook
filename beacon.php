@@ -152,7 +152,7 @@ function send_reply_message($url, $post_header, $post_body)
 }
 
 {
-    $ch = curl_init('https://secure.chulabook.com/Line/insert_db.php');
+    $ch = curl_init('https://secure.chulabook.com');
  //   $ch = curl_init('https://beacon-cubook.herokuapp.com/inser_db.php');
     
 
