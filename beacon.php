@@ -37,6 +37,26 @@ echo $new_date;
 $new_time = date("H:i:s");
 echo $new_time;
 
+$objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
+$objDB = mssql_select_db("Line_Project");
+$strSQL = "INSERT INTO Attend ";
+$strSQL .="(BTIME,BDATE) ";
+$strSQL .="VALUES ";
+$strSQL .="('A','B')";
+
+$objQuery = mssql_query($strSQL);
+if($objQuery)
+{
+	echo "Save Done.";
+}
+else
+{
+	echo "Error Save [".$strSQL."]";
+}
+mssql_close($objConnect);
+
+
+
 $jsonFlex = [
     "type" => "flex",
     "altText" => "เวลาเข้า-ออกงาน",
@@ -135,26 +155,6 @@ if ( sizeof($request_array['events']) > 0 ) {
 }
 
 echo "OK";
-
-$objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
-$objDB = mssql_select_db("Line_Project");
-$strSQL = "INSERT INTO Attend ";
-$strSQL .="(BTIME,BDATE) ";
-$strSQL .="VALUES ";
-$strSQL .="('A','B')";
-
-$objQuery = mssql_query($strSQL);
-if($objQuery)
-{
-	echo "Save Done.";
-}
-else
-{
-	echo "Error Save [".$strSQL."]";
-}
-mssql_close($objConnect);
-
-
 
 function send_reply_message($url, $post_header, $post_body)
 {
