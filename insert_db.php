@@ -4,6 +4,12 @@
 </head>
 <body>
 <?php
+	
+$new_date = date("d")." ".$month_arr[date("n")]." ".(date("Y")+543);
+echo $new_date;
+$new_time = date("H:i:s");
+echo $new_time;
+	
 $objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
 $objDB = mssql_select_db("Line_Project");
 $strSQL = "INSERT INTO Attend ";
