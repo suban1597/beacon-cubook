@@ -140,7 +140,7 @@ echo "OK";
 function send_reply_message($url, $post_header, $post_body)
 {
     $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_URL, 'https://secure.chulabook.com/Line/insert_db.php');
+    //curl_setopt($ch, CURLOPT_URL, 'https://secure.chulabook.com/Line/insert_db.php');
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $post_header);
@@ -148,10 +148,25 @@ function send_reply_message($url, $post_header, $post_body)
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
     $result = curl_exec($ch);
     curl_close($ch);
-
-
     return $result;
-
 }
+
+{
+$ch = curl_init('https://secure.chulabook.com/Line/insert_db.php');
+
+// Configure curl as needed, depending on your application
+curl_setopt_array($ch, array(
+    'CURLOPT_FOLLOWLOCATION' => TRUE,
+    'CURLOPT_RETURNTRANSFER' => TRUE,
+    'CURLOPT_CONNECTTIMEOUT' => 3,
+    // ... other options here ...
+));
+
+// Do the request
+$page = curl_exec($ch);
+
+// Cleanup
+curl_close($ch);
+}    
 
 ?>
