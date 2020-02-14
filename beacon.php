@@ -130,6 +130,27 @@ if ( sizeof($request_array['events']) > 0 ) {
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
 
         echo "Result: ".$send_result."\r\n";
+	    
+	    
+$objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
+$objDB = mssql_select_db("Line_Project");
+$strSQL = "INSERT INTO Attend ";
+$strSQL .="(BTIME,BDATE) ";
+$strSQL .="VALUES ";
+$strSQL .="('A','B')";
+
+$objQuery = mssql_query($strSQL);
+if($objQuery)
+{
+	echo "Save Done.";
+}
+else
+{
+	echo "Error Save [".$strSQL."]";
+}
+mssql_close($objConnect);
+	    
+	    
         
     }
 }
@@ -150,24 +171,5 @@ function send_reply_message($url, $post_header, $post_body)
     return $result;
 
 }
-
-$objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
-$objDB = mssql_select_db("Line_Project");
-$strSQL = "INSERT INTO Attend ";
-$strSQL .="(BTIME,BDATE) ";
-$strSQL .="VALUES ";
-$strSQL .="('A','B')";
-
-$objQuery = mssql_query($strSQL);
-if($objQuery)
-{
-	echo "Save Done.";
-}
-else
-{
-	echo "Error Save [".$strSQL."]";
-}
-mssql_close($objConnect);
-
 
 ?>
