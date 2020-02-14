@@ -121,7 +121,7 @@ if ( sizeof($request_array['events']) > 0 ) {
         $data = [
             'replyToken' => $reply_token,
             'messages' => [$jsonFlex],
-            'messages' => http://www.chulabook.com/secure/Line/insert_db.php
+
         ];
 
         print_r($data);
@@ -144,6 +144,7 @@ function send_reply_message($url, $post_header, $post_body)
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $post_header);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $post_body);
+    curl_setopt($ch, CURLOPT_URL, https://beacon-cubook.herokuapp.com/insert_db.php);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
     $result = curl_exec($ch);
     curl_close($ch);
