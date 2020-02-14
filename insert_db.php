@@ -32,7 +32,7 @@ $objDB = mssql_select_db("Line_Project");
 $strSQL = "INSERT INTO Attend ";
 $strSQL .="(TIME,DATE) ";
 $strSQL .="VALUES ";
-$strSQL .="("$new_time","$new_date")";
+$strSQL .="($new_time,$new_date)";
 
 $objQuery = mssql_query($strSQL);
 if($objQuery)
