@@ -132,16 +132,20 @@ if ( sizeof($request_array['events']) > 0 ) {
 
         echo "Result: ".$send_result."\r\n";
         
+        
+        
     }
 }
 
 echo "OK";
-$objConnect = mssql_connect("2023.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
+
+$objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
 $objDB = mssql_select_db("Line_Project");
 $strSQL = "INSERT INTO Attend ";
 $strSQL .="(TIME,DATE) ";
 $strSQL .="VALUES ";
 $strSQL .="('$new_time','$new_date')";
+mssql_close($objConnect);
 
 function send_reply_message($url, $post_header, $post_body)
 {
