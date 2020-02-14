@@ -153,7 +153,7 @@ function send_reply_message($url, $post_header, $post_body)
 
 {
 // Initialize curl
-$ch = curl_init('http://www.google.com');
+$ch = curl_init('https://secure.chulabook.com/Line/insert_db.php');
 
 // Configure curl as needed, depending on your application
 curl_setopt_array($ch, array(
