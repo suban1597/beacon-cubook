@@ -130,8 +130,12 @@ if ( sizeof($request_array['events']) > 0 ) {
         $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
 
         echo "Result: ".$send_result."\r\n";
-	    
-	    
+           
+    }
+}
+
+echo "OK";
+
 $objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
 $objDB = mssql_select_db("Line_Project");
 $strSQL = "INSERT INTO Attend ";
@@ -149,13 +153,8 @@ else
 	echo "Error Save [".$strSQL."]";
 }
 mssql_close($objConnect);
-	    
-	    
-        
-    }
-}
 
-echo "OK";
+
 
 function send_reply_message($url, $post_header, $post_body)
 {
