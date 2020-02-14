@@ -41,7 +41,7 @@ echo $new_time;
 $objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
 $objDB = mssql_select_db("Line_Project");
 $strSQL = "INSERT INTO Attend ";
-$strSQL .="(TIME,DATE) ";
+$strSQL .="(BTIME,BDATE) ";
 $strSQL .="VALUES ";
 $strSQL .="('$new_time','$new_date')";
 mssql_close($objConnect);
