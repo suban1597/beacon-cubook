@@ -152,9 +152,8 @@ function send_reply_message($url, $post_header, $post_body)
 }
 
 {
-    $ch = curl_init('https://secure.chulabook.com');
- //   $ch = curl_init('https://beacon-cubook.herokuapp.com/inser_db.php');
-    
+// Initialize curl
+$ch = curl_init('http://www.google.com');
 
 // Configure curl as needed, depending on your application
 curl_setopt_array($ch, array(
