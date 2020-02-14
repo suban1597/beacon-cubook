@@ -1,5 +1,4 @@
 <?php
-	
 date_default_timezone_set("Asia/Bangkok");
 
 $month_arr=array(
@@ -27,7 +26,7 @@ $objDB = mssql_select_db("Line_Project");
 $strSQL = "INSERT INTO Attend ";
 $strSQL .="(BTIME,BDATE) ";
 $strSQL .="VALUES ";
-$strSQL .="('A','B')";
+$strSQL .="('$new_time','$new_date')";
 
 $objQuery = mssql_query($strSQL);
 if($objQuery)
