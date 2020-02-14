@@ -104,7 +104,7 @@ $jsonFlex = [
             "action" => [
               "type" => "uri",
               "label" => "รายละเอียด",
-              "uri" => "https://beacon-cubook.herokuapp.com/insert_db.php"
+              "uri" => "http://www.chulabook.com/secure/Line/insert_db.php"
             ]
           ]
         ]
