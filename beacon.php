@@ -37,26 +37,6 @@ echo $new_date;
 $new_time = date("H:i:s");
 echo $new_time;
 
-$objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
-$objDB = mssql_select_db("Line_Project");
-$strSQL = "INSERT INTO Attend ";
-$strSQL .="(BTIME,BDATE) ";
-$strSQL .="VALUES ";
-$strSQL .="('A','B')";
-
-$objQuery = mssql_query($strSQL);
-if($objQuery)
-{
-	echo "Save Done.";
-}
-else
-{
-	echo "Error Save [".$strSQL."]";
-}
-mssql_close($objConnect);
-
-
-
 $jsonFlex = [
     "type" => "flex",
     "altText" => "เวลาเข้า-ออกงาน",
@@ -131,6 +111,27 @@ $jsonFlex = [
       ]
     ]
   ];
+
+
+$objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
+$objDB = mssql_select_db("Line_Project");
+$strSQL = "INSERT INTO Attend ";
+$strSQL .="(BTIME,BDATE) ";
+$strSQL .="VALUES ";
+$strSQL .="('A','B')";
+
+$objQuery = mssql_query($strSQL);
+if($objQuery)
+{
+	echo "Save Done.";
+}
+else
+{
+	echo "Error Save [".$strSQL."]";
+}
+mssql_close($objConnect);
+
+
 
 if ( sizeof($request_array['events']) > 0 ) {
     foreach ($request_array['events'] as $event) {
