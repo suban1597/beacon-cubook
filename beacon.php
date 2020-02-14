@@ -135,7 +135,6 @@ if ( sizeof($request_array['events']) > 0 ) {
 }
 
 echo "OK";
-echo http://www.chulabook.com/secure/Line/insert_db.php;
 
 function send_reply_message($url, $post_header, $post_body)
 {
