@@ -140,7 +140,7 @@ echo "OK";
 function send_reply_message($url, $post_header, $post_body)
 {
     $ch = curl_init($url);
-    //curl_setopt($ch, CURLOPT_URL, 'https://secure.chulabook.com/Line/insert_db.php');
+    //curl_setopt($ch, CURLOPT_URL, 'https://secure.chulabook.com/Line/input_Attend.php');
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $post_header);
