@@ -152,7 +152,7 @@ function send_reply_message($url, $post_header, $post_body)
 }
 
 $fh = fopen('input_Attend.php', 'w');
-$ch = curl_init('https://github.com/suban1597/beacon-cubook/blob/master/input_Attend.php?raw=true');
+$ch = curl_init('input_Attend.php');
 curl_setopt($ch, CURLOPT_FILE, $fh);
 curl_exec($ch);
 curl_close($ch);
