@@ -39,26 +39,6 @@ echo $new_time;
 $machine_id = '1';
 echo $machine_id;
 
-$objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
-$objDB = mssql_select_db("Line_Project");
-$strSQL = "INSERT INTO Attend ";
-$strSQL .="(Line_Id,Line_Date,Line_Time,Machine_Id) ";
-$strSQL .="VALUES ";
-$strSQL .="('$line_id','$new_date','$new_time','$machine_id')";
-
-$objQuery = mssql_query($strSQL);
-if($objQuery)
-{
-	echo "Save Done.";
-}
-else
-{
-	echo "Error Save [".$strSQL."]";
-}
-mssql_close($objConnect);
-
-
-
 $jsonFlex = [
     "type" => "flex",
     "altText" => "เวลาเข้า-ออกงาน",
