@@ -36,15 +36,14 @@ $new_date = date("d")." ".$month_arr[date("n")]." ".(date("Y")+543);
 echo $new_date;
 $new_time = date("H:i:s");
 echo $new_time;
-$line_id = $request[‘originalDetectIntentRequest’];
-#$line_id = '0444';
-echo $line_id;
 $machine_id = '1';
 echo $machine_id;
 
 $json = file_get_contents(‘php://input’);
 $request = json_decode($json, true);
 $queryText = $request[“queryResult”][“queryText”];
+$line_id = $request[‘originalDetectIntentRequest’][‘payload’][‘data’][‘source’][‘userId’];
+echo $line_id;
 
 $jsonFlex = [
     "type" => "flex",
