@@ -7,4 +7,5 @@ $request = json_decode($json, true);
 $queryText = $request["queryResult"]["queryText"];
 $query = "INSERT INTO Attend(Line_Id,Line_date,Line_Time,Machine_Id) VALUE ('1','1','1','1')";
 $resource = mysql_query($query) or die ("error".mysql_error());
+mssql_close($objConnect);
 ?>
