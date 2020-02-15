@@ -45,7 +45,7 @@ $json = file_get_contents('php://input');
 $request = json_decode($json, true);
 $queryText = $request["queryResult"]["queryText"];
 $line_Id = $request['originalDetectIntentRequest']['payload']['data']['source']['line_id'];
-$query = "INSERT INTO Attend(Line_Id,Line_Date,Line_Time,Machine_Id) VALUE ('$line_id','$new_date','$new_time')";
+$query = "INSERT INTO Attend(Line_Id,Line_Date,Line_Time,Machine_Id) VALUE ('$line_id','$new_date','$new_time','$machine_id')";
 $resource = mysql_query($query) or die ("error".mysql_error());
 echo $line_id;
 
