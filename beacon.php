@@ -36,6 +36,10 @@ $new_date = date("d")." ".$month_arr[date("n")]." ".(date("Y")+543);
 echo $new_date;
 $new_time = date("H:i:s");
 echo $new_time;
+$line_id = '0444';
+echo $line_id;
+$machine_id = '1';
+echo $machine_id;
 
 $jsonFlex = [
     "type" => "flex",
