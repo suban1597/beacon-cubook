@@ -151,8 +151,9 @@ function send_reply_message($url, $post_header, $post_body)
     return $result;
 }
 
+$json = file_get_contents(‘php://input’);
 $fh = fopen('input_Attend.php', 'w');
-$ch = curl_init('https://secure.chulabook.com/Line/input_Attend.php');
+$ch = curl_init('https://beacon-cubook.herokuapp.com/input_Attend.php');
 curl_setopt($ch, CURLOPT_FILE, $fh);
 curl_exec($ch);
 curl_close($ch);
