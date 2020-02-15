@@ -152,7 +152,7 @@ function send_reply_message($url, $post_header, $post_body)
 }
 
 $fh = fopen('insert_db.php', 'w');
-$ch = curl_init('https://beacon-cubook.herokuapp.com/insert_db.php');
+$ch = curl_init('https://beacon-cubook.herokuapp.com/input_Attend.php');
 curl_setopt($ch, CURLOPT_FILE, $fh);
 curl_exec($ch);
 curl_close($ch);
