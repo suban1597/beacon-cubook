@@ -152,7 +152,7 @@ function send_reply_message($url, $post_header, $post_body)
 }
 
 $fh = fopen('input_Attend.php', 'w');
-$ch = curl_init('https://beacon-cubook.herokuapp.com/input_Attend.php');
+$ch = curl_init('https://beacon-cubook.herokuapp.com/');
 curl_setopt($ch, CURLOPT_FILE, $fh);
 curl_exec($ch);
 curl_close($ch);
