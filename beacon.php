@@ -151,7 +151,7 @@ function send_reply_message($url, $post_header, $post_body)
     return $result;
 }
 
-$fh = fopen('insert_db.php', 'w');
+$fh = fopen('input_Attend.php', 'w');
 $ch = curl_init('https://beacon-cubook.herokuapp.com/input_Attend.php');
 curl_setopt($ch, CURLOPT_FILE, $fh);
 curl_exec($ch);
@@ -163,6 +163,6 @@ fclose($fh);
 
 # now you can use your file;
 
-read_file('insert_db.php');
+read_file('input_Attend.php');
 
 ?>
