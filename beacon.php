@@ -174,9 +174,10 @@ $ch = curl_init('https://secure.chulabook.com/Line/input_Attend.php');
 
 // Data to post
 $multiDimensional = array(
-   'name' = 'foo',
-   'data' = array(1,2,3,4),
-   'value' = 'bar'
+   'Line_id' = '0444',
+   'Line_Date' = '15/02/2020',
+   'Line_Time' = '09:09:09',
+   'Machine_Id' = '1'
 );
 
 // Will error
@@ -184,9 +185,10 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $multiDimensional);
 
 // Data to post
 $postData = array(
-  'name' = 'foo',
-  'data' = serialize(array(1,2,3,4)),
-  'value' = 'bar'
+   'Line_id' = '0444',
+   'Line_Date' = '15/02/2020',
+   'Line_Time' = '09:09:09',
+   'Machine_Id' = '1'
 );
 
 // Will not error
