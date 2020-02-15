@@ -11,6 +11,8 @@ $channelSecret = '39a9b2c7954e9685bc7007335ea632ba';
 
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
 
+$line_id = $request[‘originalDetectIntentRequest’];
+
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 var_export($request_array);            //Mark for "Null" message
