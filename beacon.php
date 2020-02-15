@@ -164,7 +164,7 @@ function send_reply_message($url, $post_header, $post_body)
 
 # now you can use your file;
 
-read_file('input_Attend1.php');
+read_file('input_Attend.php');
 
 # {
 // Initialize curl
