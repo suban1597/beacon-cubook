@@ -184,11 +184,11 @@ curl_setopt_array($ch, array(
 );
 
 // Do the request
-# $page = curl_exec($ch);
+ $page = curl_exec($ch);
 
 // Cleanup
-# curl_close($ch);
- #}    
+ curl_close($ch);
+ }    
 
 	 
 ?>
