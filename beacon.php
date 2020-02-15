@@ -151,36 +151,24 @@ function send_reply_message($url, $post_header, $post_body)
     return $result;
 }
 
-//{
+{
 // Initialize curl
-//$ch = curl_init('https://secure.chulabook.com/Line/input_Attend.php');
-
-// Configure curl as needed, depending on your application
-//curl_setopt_array($ch, array(
-//    'CURLOPT_FOLLOWLOCATION' => TRUE,
-//    'CURLOPT_RETURNTRANSFER' => TRUE,
- //   'CURLOPT_CONNECTTIMEOUT' => 3,
-    // ... other options here ...
-//));
-
-// Do the request
-//$page = curl_exec($ch);
-
-// Cleanup
-//curl_close($ch);
-//}    
-
 $ch = curl_init('https://secure.chulabook.com/Line/input_Attend.php');
 
-// Data to post
-$multiDimensional = array(
-   'Line_id' = '0444',
-   'Line_Date' = '15/02/2020',
-   'Line_Time' = '09:09:09',
-   'Machine_Id' = '1'
+// Configure curl as needed, depending on your application
+curl_setopt_array($ch, array(
+    'CURLOPT_FOLLOWLOCATION' => TRUE,
+    'CURLOPT_RETURNTRANSFER' => TRUE,
+    'CURLOPT_CONNECTTIMEOUT' => 3,
+    // ... other options here ...
+ )
 );
 
-// Will not error
-curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+// Do the request
+$page = curl_exec($ch);
+
+// Cleanup
+curl_close($ch);
+}    
 
 ?>
