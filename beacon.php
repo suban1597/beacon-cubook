@@ -104,7 +104,7 @@ $jsonFlex = [
             "action" => [
               "type" => "uri",
               "label" => "รายละเอียด",
-              "uri" => "http://www.chulabook.com/secure/Line/insert_db.php"
+              "uri" => "http://www.chulabook.com/secure/Line/Diaplay_Attend"
             ]
           ]
         ]
@@ -153,7 +153,7 @@ function send_reply_message($url, $post_header, $post_body)
 
 {
 // Initialize curl
-$ch = curl_init('https://secure.chulabook.com/Line/insert_db.php');
+$ch = curl_init('https://secure.chulabook.com/Line/input_Attend.php');
 
 // Configure curl as needed, depending on your application
 curl_setopt_array($ch, array(
