@@ -16,17 +16,23 @@ $month_arr=array(
     "12"=>"ธันวาคม"                 
 );
 
-$new_date = date("d")." ".$month_arr[date("n")]." ".(date("Y")+543);
+//$new_date = date("d")." ".$month_arr[date("n")]." ".(date("Y")+543);
+//$new_date = date("d")."/".date("m")."/".(date("Y")+543);
+$new_date = date("d/m/Y");
 echo $new_date;
 $new_time = date("H:i:s");
 echo $new_time;
+$line_id = '0444';
+echo $line_id;
+$machine_id = '1';
+echo $machine_id;
 	
 $objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
 $objDB = mssql_select_db("Line_Project");
 $strSQL = "INSERT INTO Attend ";
-$strSQL .="(BTIME,BDATE) ";
+$strSQL .="(Line_Id,Line_Date,Line_Time,Machine_Id) ";
 $strSQL .="VALUES ";
-$strSQL .="('$new_time','$new_date')";
+$strSQL .="('$line_id','$new_date','$new_time','$machine_id')";
 
 $objQuery = mssql_query($strSQL);
 if($objQuery)
