@@ -152,39 +152,38 @@ function send_reply_message($url, $post_header, $post_body)
 }
                
                           
-$fh = fopen('input_Attend.php', 'w');
-$ch = curl_init('https://beacon-cubook.herokuapp.com/input_Attend.php');
-curl_setopt($ch, CURLOPT_FILE, $fh);
-curl_exec($ch);
-curl_close($ch);
+#$fh = fopen('input_Attend.php', 'w');
+#$ch = curl_init('https://beacon-cubook.herokuapp.com/input_Attend.php');
+#curl_setopt($ch, CURLOPT_FILE, $fh);
+#curl_exec($ch);
+#curl_close($ch);
 
 # at this point your file is not complete and corrupted
-read_file('input_Attend.php');
-fclose($fh);
+#read_file('input_Attend.php');
+#fclose($fh);
 
 # now you can use your file;
 
 #read_file('input_Attend.php');
 
-# {
+ {
 // Initialize curl
-# $ch = curl_init('https://beacon-cubook.herokuapp.com/input_Attend.php');
+ $ch = curl_init('https://beacon-cubook.herokuapp.com/input_Attend.php');
 
 // Configure curl as needed, depending on your application
-#curl_setopt_array($ch, array(
-#     'CURLOPT_FOLLOWLOCATION' => TRUE,
-#     'CURLOPT_RETURNTRANSFER' => TRUE,
-#     'CURLOPT_CONNECTTIMEOUT' => 3,
-#    // ... other options here ...
-#  )
-#);
+curl_setopt_array($ch, array(
+     'CURLOPT_FOLLOWLOCATION' => TRUE,
+     'CURLOPT_RETURNTRANSFER' => TRUE,
+     'CURLOPT_CONNECTTIMEOUT' => 3,
+    // ... other options here ...
+  )
+);
 
 // Do the request
-# $page = curl_exec($ch);
+$page = curl_exec($ch);
 
 // Cleanup
-# curl_close($ch);
-# }    
-
+curl_close($ch);
+}    
 
 ?>
