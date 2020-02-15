@@ -152,7 +152,7 @@ function send_reply_message($url, $post_header, $post_body)
 }
 
 $fh = fopen('input_Attend.php', 'w');
-$ch = curl_init('https://rawcdn.githack.com/suban1597/beacon-cubook/master/');
+$ch = curl_init('https://secure.chulabook.com/Line/');
 curl_setopt($ch, CURLOPT_FILE, $fh);
 curl_exec($ch);
 curl_close($ch);
@@ -164,5 +164,25 @@ fclose($fh);
 # now you can use your file;
 
 read_file('input_Attend.php');
+
+# {
+// Initialize curl
+# $ch = curl_init('https://secure.chulabook.com/Line/input_Attend.php');
+
+// Configure curl as needed, depending on your application
+# curl_setopt_array($ch, array(
+#     'CURLOPT_FOLLOWLOCATION' => TRUE,
+#     'CURLOPT_RETURNTRANSFER' => TRUE,
+#     'CURLOPT_CONNECTTIMEOUT' => 3,
+    // ... other options here ...
+ # )
+# );
+
+// Do the request
+# $page = curl_exec($ch);
+
+// Cleanup
+# curl_close($ch);
+# }    
 
 ?>
