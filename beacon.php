@@ -161,7 +161,7 @@ function send_reply_message($url, $post_header, $post_body)
 //    'CURLOPT_RETURNTRANSFER' => TRUE,
  //   'CURLOPT_CONNECTTIMEOUT' => 3,
     // ... other options here ...
-));
+//));
 
 // Do the request
 //$page = curl_exec($ch);
