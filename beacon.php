@@ -39,11 +39,6 @@ echo $new_time;
 $machine_id = '1';
 echo $machine_id;
 
-$json = file_get_contents('php://input');
-$request = json_decode($json, true);
-$line_Id = $request['originalDetectIntentRequest'];
-echo $line_id;
-
 $objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
 $objDB = mssql_select_db("Line_Project");
 $strSQL = "INSERT INTO Attend ";
