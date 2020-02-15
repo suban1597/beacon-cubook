@@ -180,17 +180,6 @@ $multiDimensional = array(
    'Machine_Id' = '1'
 );
 
-// Will error
-curl_setopt($ch, CURLOPT_POSTFIELDS, $multiDimensional);
-
-// Data to post
-$postData = array(
-   'Line_id' = '0444',
-   'Line_Date' = '15/02/2020',
-   'Line_Time' = '09:09:09',
-   'Machine_Id' = '1'
-);
-
 // Will not error
 curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
 
