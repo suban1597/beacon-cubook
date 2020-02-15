@@ -151,23 +151,45 @@ function send_reply_message($url, $post_header, $post_body)
     return $result;
 }
 
-{
+//{
 // Initialize curl
-$ch = curl_init('https://secure.chulabook.com/Line/input_Attend.php');
+//$ch = curl_init('https://secure.chulabook.com/Line/input_Attend.php');
 
 // Configure curl as needed, depending on your application
-curl_setopt_array($ch, array(
-    'CURLOPT_FOLLOWLOCATION' => TRUE,
-    'CURLOPT_RETURNTRANSFER' => TRUE,
-    'CURLOPT_CONNECTTIMEOUT' => 3,
+//curl_setopt_array($ch, array(
+//    'CURLOPT_FOLLOWLOCATION' => TRUE,
+//    'CURLOPT_RETURNTRANSFER' => TRUE,
+ //   'CURLOPT_CONNECTTIMEOUT' => 3,
     // ... other options here ...
 ));
 
 // Do the request
-$page = curl_exec($ch);
+//$page = curl_exec($ch);
 
 // Cleanup
-curl_close($ch);
-}    
+//curl_close($ch);
+//}    
+
+$ch = curl_init('https://secure.chulabook.com/Line/input_Attend.php');
+
+// Data to post
+$multiDimensional = array(
+   'name' = 'foo',
+   'data' = array(1,2,3,4),
+   'value' = 'bar'
+);
+
+// Will error
+curl_setopt($ch, CURLOPT_POSTFIELDS, $multiDimensional);
+
+// Data to post
+$postData = array(
+  'name' = 'foo',
+  'data' = serialize(array(1,2,3,4)),
+  'value' = 'bar'
+);
+
+// Will not error
+curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
 
 ?>
