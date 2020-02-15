@@ -42,6 +42,10 @@ echo $line_id;
 $machine_id = '1';
 echo $machine_id;
 
+$json = file_get_contents(‘php://input’);
+$request = json_decode($json, true);
+$queryText = $request[“queryResult”][“queryText”];
+
 $jsonFlex = [
     "type" => "flex",
     "altText" => "เวลาเข้า-ออกงาน",
