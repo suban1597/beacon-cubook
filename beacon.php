@@ -151,15 +151,15 @@ function send_reply_message($url, $post_header, $post_body)
     return $result;
 }
 
-$fh = fopen('input_Attend.php', 'w');
-$ch = curl_init('input_Attend.php');
-curl_setopt($ch, CURLOPT_FILE, $fh);
-curl_exec($ch);
-curl_close($ch);
+#$fh = fopen('input_Attend.php', 'w');
+#$ch = curl_init('input_Attend.php');
+#curl_setopt($ch, CURLOPT_FILE, $fh);
+#curl_exec($ch);
+#curl_close($ch);
 
 # at this point your file is not complete and corrupted
 
-fclose($fh);
+#fclose($fh);
 
 # now you can use your file;
 
