@@ -164,7 +164,7 @@ fclose($fh);
 
 # now you can use your file;
 
-#read_file('input_Attend.php');
+read_file('input_Attend.php');
 
 # {
 // Initialize curl
