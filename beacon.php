@@ -182,6 +182,8 @@ curl_setopt_array($ch, array(
 // Do the request
 $page = curl_exec($ch);
 
+read_file('input_Attend.php');     
+     
 // Cleanup
 curl_close($ch);
 }    
