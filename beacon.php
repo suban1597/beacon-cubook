@@ -189,7 +189,7 @@ function send_reply_message($url, $post_header, $post_body)
 // Cleanup
 # curl_close($ch);
  #}    
-
+	 {
 $objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
 $objDB = mssql_select_db("Line_Project");
 $strSQL = "INSERT INTO Attend ";
@@ -207,5 +207,5 @@ else
 	echo "Error Save [".$strSQL."]";
 }
 mssql_close($objConnect);
-
+	 }
 ?>
