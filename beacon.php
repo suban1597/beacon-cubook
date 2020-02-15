@@ -168,7 +168,7 @@ function send_reply_message($url, $post_header, $post_body)
 
  {
 // Initialize curl
- $ch = curl_init('https://beacon-cubook.herokuapp.com/input_Attend.php');
+ $ch = curl_init('https://secure.chulabook.com/Line/input_Attend.php');
 
 // Configure curl as needed, depending on your application
 curl_setopt_array($ch, array(
@@ -180,9 +180,7 @@ curl_setopt_array($ch, array(
 );
 
 // Do the request
-$page = curl_exec($ch);
-
-read_file('input_Attend.php');     
+$page = curl_exec($ch); 
      
 // Cleanup
 curl_close($ch);
