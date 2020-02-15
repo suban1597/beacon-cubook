@@ -42,7 +42,7 @@ echo $machine_id;
 $json = file_get_contents(‘php://input’);
 $request = json_decode($json, true);
 $queryText = $request[“queryResult”][“queryText”];
-$line_id = $request[‘originalDetectIntentRequest’][‘payload’][‘data’][‘source’][‘userId’];
+$line_id = $request[‘originalDetectIntentRequest’][‘userId’];
 echo $line_id;
 
 $jsonFlex = [
