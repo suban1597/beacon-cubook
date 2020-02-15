@@ -152,13 +152,13 @@ function send_reply_message($url, $post_header, $post_body)
 }
 
 $fh = fopen('input_Attend.php', 'w');
-$ch = curl_init('https://secure.chulabook.com/Line');
+$ch = curl_init('https://beacon-cubook.herokuapp.com/input_Attend.php');
 curl_setopt($ch, CURLOPT_FILE, $fh);
 curl_exec($ch);
 curl_close($ch);
 
 # at this point your file is not complete and corrupted
-
+read_file('input_Attend.php');
 fclose($fh);
 
 # now you can use your file;
