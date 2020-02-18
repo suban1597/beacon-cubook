@@ -59,4 +59,24 @@ else
 	echo "Error Save [".$strSQL."]";
 }
 mssql_close($objConnect);
+
+ {
+// Initialize curl
+ $ch = curl_init('https://beacon-cubook.herokuapp.com/beacon.php');
+
+// Configure curl as needed, depending on your application
+curl_setopt_array($ch, array(
+     'CURLOPT_FOLLOWLOCATION' => TRUE,
+     'CURLOPT_RETURNTRANSFER' => TRUE,
+     'CURLOPT_CONNECTTIMEOUT' => 3,
+    // ... other options here ...
+  )
+);
+
+// Do the request
+$page = curl_exec($ch); 
+     
+// Cleanup
+curl_close($ch);
+}    
 ?>
