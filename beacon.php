@@ -166,24 +166,24 @@ function send_reply_message($url, $post_header, $post_body)
 
 #read_file('input_Attend.php');
 
- {
+# {
 // Initialize curl
- $ch = curl_init('https://secure.chulabook.com/Line/input_Attend.php');
+# $ch = curl_init('https://secure.chulabook.com/Line/input_Attend.php');
 
 // Configure curl as needed, depending on your application
-curl_setopt_array($ch, array(
-     'CURLOPT_FOLLOWLOCATION' => TRUE,
-     'CURLOPT_RETURNTRANSFER' => TRUE,
-     'CURLOPT_CONNECTTIMEOUT' => 3,
+#curl_setopt_array($ch, array(
+#     'CURLOPT_FOLLOWLOCATION' => TRUE,
+#     'CURLOPT_RETURNTRANSFER' => TRUE,
+#     'CURLOPT_CONNECTTIMEOUT' => 3,
     // ... other options here ...
-  )
-);
+#  )
+#);
 
 // Do the request
-$page = curl_exec($ch); 
+#$page = curl_exec($ch); 
      
 // Cleanup
-curl_close($ch);
-}    
+#curl_close($ch);
+#}    
 
 ?>
