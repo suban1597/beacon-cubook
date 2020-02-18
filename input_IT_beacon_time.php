@@ -30,7 +30,7 @@ echo $machine_id;
 	
 $objConnect = mssql_connect("203.154.162.41","sa","Adminchul@book1") or die("Error Connect to Database");
 $objDB = mssql_select_db("Line_Project");
-$strSQL = "INSERT INTO Attend ";
+$strSQL = "INSERT INTO IT_beacon_time ";
 $strSQL .="(Line_Id,Line_Date,Line_Time,Machine_Id) ";
 $strSQL .="VALUES ";
 $strSQL .="('$line_id','$new_date','$new_time','$machine_id')";
