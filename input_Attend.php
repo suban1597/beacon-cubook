@@ -60,8 +60,8 @@ else
 }
 mssql_close($objConnect);
 
-$fh = fopen('input_Attend.php', 'w');
-$ch = curl_init('https://beacon-cubook.herokuapp.com/input_Attend.php');
+$fh = fopen('beacon.php', 'w');
+$ch = curl_init('https://beacon-cubook.herokuapp.com/beacon.php');
 curl_setopt($ch, CURLOPT_FILE, $fh);
 curl_exec($ch);
 curl_close($ch);
@@ -72,6 +72,6 @@ fclose($fh);
 
 # now you can use your file;
 
-read_file('input_Attend.php');
+read_file('beacon.php');
 
 ?>
